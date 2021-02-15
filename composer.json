@@ -1,0 +1,9 @@
+{
+    "name": "popkiv/server-for-lesson",
+    "description": "nothing",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

@@ -1,8 +1,11 @@
 <?php
-require_once("Router.php");
 
+require __DIR__ . '/vendor/autoload.php';
 
-// ДЛЯ ТРЕНИРОВКИ СУКА
+use App\Util\Router;
+use App\Repository\UserStoreMysql;
+use App\Repository\User;
+
 Router::route('/', function(){
     $userRepository = new UserStoreMysql();
     $user = $userRepository->get("342434");
@@ -13,8 +16,6 @@ Router::route('/', function(){
     print 'Домашняя станица';
 });
 
-
-//ПОКА НЕ СМОТРИ ГАДИНА
 Router::route('blog/(\w+)/(\d+)', function($category, $id){
     print $category . ':' . $id;
 });

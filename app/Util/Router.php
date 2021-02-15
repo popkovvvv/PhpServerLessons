@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Util;
 
 class Router
 {
@@ -41,5 +42,7 @@ class Router
                 return call_user_func_array($callback, array_values($params));
             }
         }
+
+        return false;
     }
 }
