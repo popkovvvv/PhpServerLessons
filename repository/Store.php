@@ -1,5 +1,7 @@
 <?php
 
+namespace Repository;
+
 //базовый стор, где описаны общие методы для любой сущности
 interface Store
 {

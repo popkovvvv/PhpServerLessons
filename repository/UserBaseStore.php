@@ -1,5 +1,6 @@
 <?php
 
+namespace Repository;
 
 class UserStoreMysql extends BaseStore implements UserStore
 {

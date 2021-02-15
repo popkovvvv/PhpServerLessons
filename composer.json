@@ -1,0 +1,9 @@
+{
+    "name": "michael/src",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Repository\\": "repository"
+        }
+    }
+}
