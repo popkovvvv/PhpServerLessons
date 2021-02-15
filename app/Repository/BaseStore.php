@@ -4,12 +4,18 @@ namespace App\Repository;
 
 use App\Util\MySqlUtils;
 
-//Базовая реализация стора
+/**
+ * Базовая реализация стора
+ */
 abstract class BaseStore implements Store
 {
-    //этот метод необходямо переопределить для базового функционала, так как он получает имя таблицы для запросов
-    abstract function getTableName(): String;
+    /**
+     * этот метод необходямо переопределить для базового функционала, так как он получает имя таблицы для запросов
+     * @return string
+     */
+    abstract function getTableName(): string;
 
+    /** @var PDO */
     protected PDO $connection;
 
     /**
@@ -20,7 +26,11 @@ abstract class BaseStore implements Store
         $this->connection = MySqlUtils::getConnection();
     }
 
-    public function delete($id)
+    /**
+     * @param strind $id
+     * @return void
+     */
+    public function delete(string $id): void
     {
         $stmt = $this->connection->prepare('DELETE FROM $this->getTableName() WHERE id = ?');
         $stmt->execute($id);

@@ -2,11 +2,33 @@
 
 namespace App\Repository;
 
-//базовый стор, где описаны общие методы для любой сущности
+use App\Model\Entity;
+
+/**
+ * базовый стор, где описаны общие методы для любой сущности
+ */
 interface Store
 {
-    public function get(string $id);
-    public function update($instance);
-    public function delete(string $id);
-    public function put($instance);
+    /**
+     * @param string $id 
+     * @return Entity
+     */
+    public function get(string $id): Entity;
+
+    /**
+     * @param Entity $instance
+     * @return void
+     */
+    public function update(Entity $instance): void;
+
+    /**
+     * @param
+     */
+    public function put(Entity $instance): void;
+
+    /**
+     * @param string $id
+     * @return void
+     */
+    public function delete(string $id): void;
 }
