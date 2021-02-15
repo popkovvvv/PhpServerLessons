@@ -1,6 +1,6 @@
 <?php
 
-namespace Repository;
+namespace App\Repository;
 
 //Базовая реализация стора
 abstract class BaseStore implements Store

@@ -1,9 +1,9 @@
 <?php
-require_once 'vendor/autoload.php';
-require_once("Router.php");
 
-Router::route('/', function(){
-    $userRepository = new Repository/UserStoreMysql();
+require __DIR__ . '/vendor/autoload.php';
+
+\App\Util\Router::route('/', function(){
+    $userRepository = new UserStoreMysql();
     $user = $userRepository->get("342434");
     print_r($user->getEmail());
     $saveUser = new User("Dima", "lox@mail.ru");
@@ -18,7 +18,7 @@ Router::route('blog/(\w+)/(\d+)', function($category, $id){
 
 
 // запускаем маршрутизатор, передавая ему запрошенный адрес
-Router::execute($_SERVER['REQUEST_URI']);
+Router::execuute($_SERVER['REQUEST_URI']);
 
 
 //Дима что бы запустить свой сервер необходимо в консоль написать php -S localhost:8000 Index.php

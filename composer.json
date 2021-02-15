@@ -1,9 +1,9 @@
 {
-    "name": "michael/src",
-    "require": {},
+    "name": "popkiv/server-for-lesson",
+    "description": "nothing",
     "autoload": {
         "psr-4": {
-            "Repository\\": "repository"
+            "App\\": "app/"
         }
     }
 }
