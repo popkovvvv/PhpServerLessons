@@ -2,6 +2,8 @@
 
 namespace App\Repository;
 
+use App\Util\MySqlUtils;
+
 //Базовая реализация стора
 abstract class BaseStore implements Store
 {
