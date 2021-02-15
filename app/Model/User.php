@@ -2,16 +2,19 @@
 
 namespace App\Model;
 
-class User
+class User extends Entity 
 {
-    private String $id;
-    private String $name;
-    private String $email;
+    /** @var string */
+    private string $id;
+    /** @var string */
+    private string $name;
+    /** @var string */
+    private string $email;
 
     /**
      * User constructor.
-     * @param String $name
-     * @param String $email
+     * @param string $name
+     * @param string $email
      */
     public function __construct(string $name, string $email)
     {
@@ -21,7 +24,7 @@ class User
 
 
     /**
-     * @return String
+     * @return string
      */
     public function getId(): string
     {
@@ -29,7 +32,7 @@ class User
     }
 
     /**
-     * @return String
+     * @return string
      */
     public function getName(): string
     {
@@ -37,7 +40,7 @@ class User
     }
 
     /**
-     * @param String $name
+     * @param string $name
      */
     public function setName(string $name): void
     {
@@ -45,7 +48,7 @@ class User
     }
 
     /**
-     * @return String
+     * @return string
      */
     public function getEmail(): string
     {
@@ -53,12 +56,10 @@ class User
     }
 
     /**
-     * @param String $email
+     * @param string $email
      */
     public function setEmail(string $email): void
     {
         $this->email = $email;
     }
-
-
 }
